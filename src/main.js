@@ -124,8 +124,9 @@ async function doJb() {
 
     logger.info("===END===");
   } catch (e) {
-    logger.error(e.message);
-    logger.error(e.stack);
+    logger.error("✖ فشل التشغيل");
+    logger.error("اغلق المتصفح وحاول مرة أخرى.");
+}
     //mem.free_all();
   }
 }
