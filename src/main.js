@@ -10,7 +10,24 @@ function load_script(src, remote = true, transfer = []) {
 
 async function doJb() {
   await load_script("src/misc.js");
+const bar = document.getElementById("loaderFill");
+const percent = document.getElementById("loaderPercent");
+const msg = document.getElementById("loaderMessage");
 
+let progress = 0;
+
+const loader = setInterval(() => {
+
+    if (progress < 95) {
+
+        progress += 5;
+
+        bar.style.width = progress + "%";
+        percent.innerHTML = progress + "%";
+
+    }
+
+}, 250);
   try {
     version.init();
     switch (version.console) {
@@ -34,13 +51,15 @@ async function doJb() {
 
     init_arw(rw);
     init_rop();
-    init_syscalls();
+   init_syscalls();
 
-    logger.info("===END===");
+progress = 35;
+bar.style.width = "35%";
+percent.innerHTML = "35%";
 
-    await load_script("src/loader.js");
-    await load_script("src/workers.js");
+logger.info("===END===");
 
+await load_script("src/loader.js");
     switch (version.console) {
       case 4:
         await load_script("src/ps4/kernel.js");
@@ -122,10 +141,27 @@ async function doJb() {
       load_bin(bin_u8);
     }
 
-    logger.info("===END===");
-  } catch (e) {
+  clearInterval(loader);
+
+bar.style.width = "100%";
+percent.innerHTML = "100%";
+
+msg.innerHTML = `
+✔ تم الانتهاء<br><br>
+الآن تقدر تستمتع بالألعاب<br>
+شكراً لاستخدامك Wolf Store
+`;
+
+logger.info("===END===");
+ catch (e) {
+
+    clearInterval(loader);
+
+    msg.innerHTML = `
+✖ أغلق المتصفح وحاول مرة أخرى
+`;
+
     logger.error(e.message);
     logger.error(e.stack);
-    //mem.free_all();
-  }
+
 }
