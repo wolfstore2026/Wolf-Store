@@ -13,7 +13,16 @@
 body{
     font-family:'Poppins',sans-serif;
     color:#ffffff;
-    background:#050505;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("includes/wolf.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
     overflow-x:hidden;
     text-align:center;
     padding:20px;
