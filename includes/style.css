@@ -160,33 +160,35 @@ hr{
 
 #console{
 
-    position:absolute;
+    position:fixed;
 
-    left:-9999px;
+    width:1px;
+
+    height:1px;
+
+    bottom:0;
+
+    right:0;
+
+    overflow:hidden;
 
     opacity:0;
 
-}
-#console::-webkit-scrollbar{
+    pointer-events:none;
 
-    width:100px;
+    z-index:-1;
 
-}
+    padding:0;
 
-#console::-webkit-scrollbar-thumb{
+    margin:0;
 
-    background:#D4AF37;
+    border:none;
 
-    border-radius:20px;
+    background:transparent;
 
-}
-
-#console::-webkit-scrollbar-track{
-
-    background:#111;
+    color:transparent;
 
 }
-
 /* Buttons */
 
 .btn-container{
