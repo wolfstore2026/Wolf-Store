@@ -16,7 +16,7 @@ body{
 
     background:
         linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-        url("includes/wolf.jpg") center center no-repeat fixed;
+        url("includes/cat.jpg") center center no-repeat fixed;
 
     background-size:cover;
 
