@@ -15,45 +15,16 @@ body{
     color:#ffffff;
 
     background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("includes/wolf.jpg");
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("includes/wolfstore.jpg") center center no-repeat fixed;
 
     background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
 
-    overflow-x:hidden;
+    overflow:hidden;
     text-align:center;
     padding:20px;
     position:relative;
 }
-
-/* Animated Background */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(255,215,0,.18),transparent 30%),
-    radial-gradient(circle at 80% 70%,rgba(212,175,55,.18),transparent 35%),
-    radial-gradient(circle at 50% 50%,rgba(255,215,0,.08),transparent 45%);
-    animation:bgMove 12s ease-in-out infinite alternate;
-    z-index:-2;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
-    background-size:40px 40px;
-    z-index:-1;
-}
-
 @keyframes bgMove{
     from{
         transform:scale(1) rotate(0deg);
