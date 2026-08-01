@@ -12,26 +12,13 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    color:#ffffff;
-
-    background:
-        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-        url("includes/cat.jpg") center center no-repeat fixed;
-
-    background-size:cover;
-
+    color:#fff;
+    background:url("includes/cat.jpg") center center/cover no-repeat fixed;
     overflow:hidden;
     text-align:center;
     padding:20px;
     position:relative;
 }
-@keyframes bgMove{
-    from{
-        transform:scale(1) rotate(0deg);
-    }
-    to{
-        transform:scale(1.15) rotate(3deg);
-    }
 }
 
 /* Titles */
