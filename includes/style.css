@@ -457,3 +457,15 @@ width:100%;
     font-size:22px;
     color:white;
 }
+#console{
+    position:absolute;
+    left:-9999px;
+}
+
+#UA{
+    display:none;
+}
+
+.media-box{
+    display:none;
+}
