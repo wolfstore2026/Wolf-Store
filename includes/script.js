@@ -49,7 +49,7 @@ function stopInterval(){
 function jailbreakCountdown() {   
     stopInterval();
 
-    let countdown = 5;
+    let countdown = 1;
     label.textContent = `Auto Jailbreaking in: ${countdown}`;
     timerId = setInterval(() => {
         countdown--;
